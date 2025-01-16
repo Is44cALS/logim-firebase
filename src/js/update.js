@@ -2,12 +2,13 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/fireba
 import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
 
 const firebaseConfig = {
-apiKey: "AIzaSyDTVgkFitlKbzyPnMSZHHwHk9fiP1iKvPs",
-authDomain: "login-com-firebase-7f3af.firebaseapp.com",
-projectId: "login-com-firebase-7f3af",
-storageBucket: "login-com-firebase-7f3af.appspot.com",
-messagingSenderId: "949263278669",
-appId: "1:949263278669:web:2729dd103fb249a0b33204"
+    apiKey: "AIzaSyAB0t3hUxpZtCPTEmmbVEfHGWqfd4xqgNU",
+  authDomain: "correio-do-amor-48a9f.firebaseapp.com",
+  projectId: "correio-do-amor-48a9f",
+  storageBucket: "correio-do-amor-48a9f.firebasestorage.app",
+  messagingSenderId: "400456218648",
+  appId: "1:400456218648:web:edec8e20ba12436a792b6d",
+  measurementId: "G-62RY0QRZCG"
 };
 
 // Initialize Firebase
