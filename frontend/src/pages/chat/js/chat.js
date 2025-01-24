@@ -26,7 +26,7 @@ function updateUserProfile(user) {
     firstName = userString[0];
     const userProfilePicture = user.photoURL;
 
-    document.getElementById("userName").textContent = `Olá ${firstName}`;
+    document.querySelector(".login__input").value = `${userName}`;
     document.getElementById("userProfilePicture").src = userProfilePicture;
 }
 
@@ -61,8 +61,6 @@ const colors = [
 ]
 
 const user = { id: "", name: "", color: "" }
-
-let websocket
 
 const createMessageSelfElement = (content) => {
     const div = document.createElement("div")
@@ -115,17 +113,19 @@ const processMessage = ({ data }) => {
     scrollScreen()
 }
 
+let websocket;
+
 const handleLogin = (event) => {
     event.preventDefault()
 
     user.id = crypto.randomUUID()
-    user.name = firstName
+    user.name = loginInput.value
     user.color = getRandomColor()
 
     login.style.display = "none"
     chat.style.display = "flex"
 
-    const websocket = new WebSocket("ws://localhost:8080");
+    websocket = new WebSocket("ws://localhost:8080");
     websocket.onmessage = processMessage
 }
 
