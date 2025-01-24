@@ -1,0 +1,25 @@
+{
+  "name": "logim-firebase",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/pages/chat/js/server.js",
+    "dev": "node --watch src/pages/chat/js/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Is44cALS/logim-firebase.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Is44cALS/logim-firebase/issues"
+  },
+  "homepage": "https://github.com/Is44cALS/logim-firebase#readme",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "ws": "^8.18.0"
+  }
+}
