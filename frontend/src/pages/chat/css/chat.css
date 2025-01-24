@@ -18,21 +18,6 @@ body {
     background-size: cover;
     background-attachment: fixed;
     color: #f2f2f2;
-    filter: grayscale(100%);
-}
-
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* background: url("../../../images/fundo-coraco.jpg") center/cover no-repeat;
-    filter: grayscale(100%); */
-    background: rgba(0, 0, 0, 0.2); /* Ajuste a opacidade para seu efeito desejado */
-    mix-blend-mode: luminosity;
-    z-index: -1; /* Fica atrás do conteúdo */
 }
 
 .container {
@@ -49,7 +34,6 @@ body::before {
     background-color: #212121;
     border-radius: 5px;
     padding: 20px;
-    display: none;
 }
 
 .login > h2 {
@@ -98,7 +82,7 @@ body::before {
 .chat {
     width: 100%;
     height: 100%;
-    /* display: none; */
+    display: none;
     flex-direction: column;
     justify-content: space-between;
 }
@@ -160,7 +144,7 @@ body::before {
 }
 
 .message--self {
-    background-color: #f2f2f2;
+    background-color: #dab8b8;
     color: #121212;
     border-radius: 10px 10px 0 10px;
     align-self: flex-end;
