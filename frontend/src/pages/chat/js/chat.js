@@ -18,13 +18,8 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-let firstName;
-
 function updateUserProfile(user) {
     let userName = user.displayName;
-    let userString = userName.split(" ");
-    firstName = userString[0];
-    const userProfilePicture = user.photoURL;
 
     document.querySelector(".login__input").value = `${userName}`;
 }
@@ -56,7 +51,21 @@ const colors = [
     "cornflowerblue",
     "darkkhaki",
     "hotpink",
-    "gold"
+    "gold",
+    "lightcoral",
+    "mediumseagreen",
+    "mediumslateblue",
+    "mediumturquoise",
+    "mediumvioletred",
+    "midnightblue",
+    "olive",
+    "orange",
+    "orangered",
+    "palevioletred",
+    "peru",
+    "plum",
+    "powderblue",
+    "royalblue"
 ]
 
 const user = { id: "", name: "", color: "" }
@@ -144,4 +153,4 @@ const sendMessage = (event) => {
 }
 
 loginForm.addEventListener("submit", handleLogin)
-chatForm.addEventListener("click", sendMessage)
+chatForm.addEventListener("submit", sendMessage)

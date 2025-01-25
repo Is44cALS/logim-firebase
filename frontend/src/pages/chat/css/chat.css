@@ -43,6 +43,12 @@ body {
     margin-bottom: 20px;
 }
 
+.login > p {
+    font-weight: 600;
+    padding-left: 4px;
+    padding-block: 16px;
+}
+
 .login__form {
     display: flex;
     flex-direction: column;
@@ -126,11 +132,19 @@ body {
     background: none;
     fill: #f2f2f2;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .chat__button:hover {
     transition: .2s;
     fill: #fdafaf;
+}
+
+.chat__button svg {
+    width: 100%;
+    height: auto;
 }
 
 .chat__messages > div {
