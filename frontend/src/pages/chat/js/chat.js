@@ -27,7 +27,6 @@ function updateUserProfile(user) {
     const userProfilePicture = user.photoURL;
 
     document.querySelector(".login__input").value = `${userName}`;
-    document.getElementById("userProfilePicture").src = userProfilePicture;
 }
 
 onAuthStateChanged(auth, (user) => {
@@ -125,7 +124,7 @@ const handleLogin = (event) => {
     login.style.display = "none"
     chat.style.display = "flex"
 
-    websocket = new WebSocket("ws://localhost:8080");
+    websocket = new WebSocket("wss://backend-correio.onrender.com");
     websocket.onmessage = processMessage
 }
 
