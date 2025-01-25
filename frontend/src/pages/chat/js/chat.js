@@ -123,8 +123,8 @@ const handleLogin = (event) => {
 
     login.style.display = "none"
     chat.style.display = "flex"
-
-    websocket = new WebSocket("wss://backend-correio.onrender.com");
+    
+    websocket = new WebSocket("wss://backend-correio-do-amor.onrender.com");
     websocket.onmessage = processMessage
 }
 
@@ -144,4 +144,4 @@ const sendMessage = (event) => {
 }
 
 loginForm.addEventListener("submit", handleLogin)
-chatForm.addEventListener("submit", sendMessage)
+chatForm.addEventListener("click", sendMessage)
