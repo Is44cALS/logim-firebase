@@ -95,7 +95,7 @@ body {
 
 .chat__messages {
     flex-grow: 1;
-    padding: 30px 30px 90px;
+    padding: 30px 10px 90px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -162,6 +162,7 @@ body {
     color: #121212;
     border-radius: 10px 10px 0 10px;
     align-self: flex-end;
+    word-wrap: break-word;
 }
 
 .message--other {
@@ -169,6 +170,7 @@ body {
     color: #f2f2f2;
     border-radius: 0 10px 10px 10px;
     align-self: flex-start;
+    word-wrap: break-word;
 }
 
 .message--sender {
@@ -176,4 +178,5 @@ body {
     margin-bottom: 15px;
     font-weight: 700;
     color: cadetblue;
+    
 }
