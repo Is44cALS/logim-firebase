@@ -138,19 +138,22 @@ const handleLogin = (event) => {
 }
 
 const sendMessage = (event) => {
-    event.preventDefault()
+    event.preventDefault();
 
-    const message = {
-        userId: user.id,
-        userName: user.name,
-        userColor: user.color,
-        content: chatInput.value
+    if (websocket.readyState === WebSocket.OPEN) {
+        const message = {
+            userId: user.id,
+            userName: user.name,
+            userColor: user.color,
+            content: chatInput.value,
+        };
+
+        websocket.send(JSON.stringify(message));
+        chatInput.value = "";
+    } else {
+        alert("Conexão WebSocket não está aberta. Tente novamente mais tarde.");
     }
-
-    websocket.send(JSON.stringify(message))
-
-    chatInput.value = ""
-}
+};
 
 loginForm.addEventListener("submit", handleLogin)
 chatForm.addEventListener("submit", sendMessage)
